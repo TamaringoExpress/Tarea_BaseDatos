@@ -1,0 +1,16 @@
+{
+    "videojuegos": [
+        { "id": 1,  "titulo": "Terraria", "genero": "Sandbox", "anio": 2011, "precio": 9.99, "calificacion": 9.0, "desarrollador": "Re-Logic" },
+        { "id": 2,  "titulo": "Cuphead", "genero": "Plataformas", "anio": 2017, "precio": 19.99, "calificacion": 8.9, "desarrollador": "Studio MDHR" },
+        { "id": 3,  "titulo": "Dead Cells", "genero": "Roguelike", "anio": 2018, "precio": 24.99, "calificacion": 9.1, "desarrollador": "Motion Twin" },
+        { "id": 4,  "titulo": "Subnautica", "genero": "Supervivencia", "anio": 2018, "precio": 29.99, "calificacion": 9.2, "desarrollador": "Unknown Worlds" },
+        { "id": 5,  "titulo": "Valorant", "genero": "Shooter", "anio": 2020, "precio": 0.0, "calificacion": 8.8, "desarrollador": "Riot Games" },
+        { "id": 6,  "titulo": "Ori and the Will of the Wisps", "genero": "Metroidvania", "anio": 2020, "precio": 29.99, "calificacion": 9.4, "desarrollador": "Moon Studios" },
+        { "id": 7,  "titulo": "Slay the Spire", "genero": "Cartas", "anio": 2019, "precio": 24.99, "calificacion": 9.0, "desarrollador": "Mega Crit" },
+        { "id": 8,  "titulo": "Factorio", "genero": "Estrategia", "anio": 2020, "precio": 35.0, "calificacion": 9.5, "desarrollador": "Wube Software" },
+        { "id": 9,  "titulo": "No Man's Sky", "genero": "Exploración", "anio": 2016, "precio": 59.99, "calificacion": 8.7, "desarrollador": "Hello Games" },
+        { "id": 10, "titulo": "It Takes Two", "genero": "Cooperativo", "anio": 2021, "precio": 39.99, "calificacion": 9.3, "desarrollador": "Hazelight Studios" },
+        { "id": 11, "titulo": "Sea of Thieves", "genero": "Aventura", "anio": 2018, "precio": 39.99, "calificacion": 8.6, "desarrollador": "Rare" },
+        { "id": 12, "titulo": "Satisfactory", "genero": "Simulación", "anio": 2024, "precio": 39.99, "calificacion": 9.2, "desarrollador": "Coffee Stain Studios" }
+    ]
+}

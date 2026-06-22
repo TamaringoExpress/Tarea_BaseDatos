@@ -1,0 +1,171 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+
+    <!--
+    ╔══════════════════════════════════════════════╗
+    ║         TIENDA RPG — UI Toolkit Layout       ║
+    ╚══════════════════════════════════════════════╝
+    Pantalla completa con:
+      · Header con ícono decorativo + título + subtítulo
+      · Barra de monedas (oro disponible)
+      · Divider decorativo
+      · ScrollView con la tabla de objetos
+      · Footer con tip de compra
+    -->
+
+    <!-- ── Pantalla completa ───────────────────────────────────── -->
+    <ui:VisualElement name="root"
+        style="flex-grow: 1;
+               flex-direction: column;
+               background-color: rgb(12, 12, 22);
+               padding: 0px;">
+
+        <!-- ── HEADER ─────────────────────────────────────────── -->
+        <ui:VisualElement name="header"
+            style="flex-direction: row;
+                   align-items: center;
+                   justify-content: space-between;
+                   background-color: rgb(18, 18, 35);
+                   padding-top: 18px;
+                   padding-bottom: 18px;
+                   padding-left: 28px;
+                   padding-right: 28px;
+                   border-bottom-width: 2px;
+                   border-bottom-color: rgb(80, 60, 180);">
+
+            <!-- Ícono + textos -->
+            <ui:VisualElement name="header-left"
+                style="flex-direction: row; align-items: center;">
+
+                <!-- Ícono decorativo (cuadrado con símbolo ⚔) -->
+                <ui:Label text="⚔"
+                    style="font-size: 28px;
+                           color: rgb(255, 210, 60);
+                           margin-right: 14px;
+                           background-color: rgb(35, 28, 70);
+                           padding: 6px 10px;
+                           border-radius: 8px;
+                           border-width: 1px;
+                           border-color: rgb(80, 60, 180);" />
+
+                <ui:VisualElement style="flex-direction: column;">
+                    <ui:Label name="titulo" text="RANKING DEL TORNEO"
+                        style="font-size: 20px;
+                               color: rgb(220, 200, 255);
+                               -unity-font-style: bold;
+                               margin-bottom: 2px;" />
+                    <ui:Label text="Compra equipo para tu próxima aventura"
+                        style="font-size: 11px;
+                               color: rgb(120, 110, 160);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Monedas disponibles -->
+            <ui:VisualElement name="monedas-container"
+                style="flex-direction: row;
+                       align-items: center;
+                       background-color: rgb(40, 32, 10);
+                       border-width: 1px;
+                       border-color: rgb(200, 160, 20);
+                       border-radius: 20px;
+                       padding: 6px 16px;">
+                <ui:Label text="🤦‍♂️"
+                    style="font-size: 16px; margin-right: 6px;" />
+                <ui:Label name="monedas-label" text="10 equipos"
+                    style="font-size: 13px;
+                           color: rgb(255, 210, 60);
+                           -unity-font-style: bold;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ── BARRA DE FILTROS / INFO ─────────────────────────── -->
+        <ui:VisualElement name="barra-info"
+            style="flex-direction: row;
+                   align-items: center;
+                   justify-content: space-between;
+                   background-color: rgb(22, 22, 40);
+                   padding-top: 10px;
+                   padding-bottom: 10px;
+                   padding-left: 28px;
+                   padding-right: 28px;
+                   border-bottom-width: 1px;
+                   border-bottom-color: rgb(40, 40, 65);">
+
+            <ui:Label text="📦  Inventario disponible"
+                style="font-size: 12px;
+                       color: rgb(140, 130, 180);" />
+
+            <!-- Badges de categorías decorativas -->
+            <ui:VisualElement style="flex-direction: row; align-items: center;">
+
+                <ui:Label text="Arma"
+                    style="font-size: 10px;
+                           color: rgb(255, 120, 100);
+                           background-color: rgb(60, 20, 20);
+                           border-radius: 10px;
+                           padding: 3px 10px;
+                           margin-right: 6px;
+                           border-width: 1px;
+                           border-color: rgb(255, 80, 60);" />
+
+                <ui:Label text="Armadura"
+                    style="font-size: 10px;
+                           color: rgb(100, 180, 255);
+                           background-color: rgb(15, 30, 60);
+                           border-radius: 10px;
+                           padding: 3px 10px;
+                           margin-right: 6px;
+                           border-width: 1px;
+                           border-color: rgb(60, 130, 220);" />
+
+                <ui:Label text="Poción"
+                    style="font-size: 10px;
+                           color: rgb(120, 240, 140);
+                           background-color: rgb(15, 45, 20);
+                           border-radius: 10px;
+                           padding: 3px 10px;
+                           margin-right: 6px;
+                           border-width: 1px;
+                           border-color: rgb(60, 180, 80);" />
+
+                <ui:Label text="Accesorio"
+                    style="font-size: 10px;
+                           color: rgb(230, 180, 255);
+                           background-color: rgb(40, 15, 60);
+                           border-radius: 10px;
+                           padding: 3px 10px;
+                           border-width: 1px;
+                           border-color: rgb(160, 80, 220);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ── SCROLL VIEW (tabla inyectada por TableBuilder) ─── -->
+        <ui:ScrollView name="contenedor-scroll"
+            style="flex-grow: 1;
+                   margin-top: 0px;
+                   margin-left: 20px;
+                   margin-right: 20px;
+                   margin-bottom: 0px;" />
+
+        <!-- ── FOOTER ─────────────────────────────────────────── -->
+        <ui:VisualElement name="footer"
+            style="flex-direction: row;
+                   align-items: center;
+                   justify-content: center;
+                   background-color: rgb(18, 18, 35);
+                   border-top-width: 2px;
+                   border-top-color: rgb(80, 60, 180);
+                   padding: 10px 28px;">
+
+            <ui:Label text="💡  Tip: Los objetos Legendarios solo aparecen una vez. ¡No los pierdas!"
+                style="font-size: 11px;
+                       color: rgb(100, 90, 140);
+                       -unity-font-style: italic;" />
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

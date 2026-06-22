@@ -1,0 +1,16 @@
+{
+    "objetos": [
+        { "id": 1,  "nombre": "Lanza del Dragón",        "tipo": "Arma",      "precio": 2100, "rareza": "Raro" },
+        { "id": 2,  "nombre": "Casco del Guardián",      "tipo": "Armadura",  "precio": 950,  "rareza": "Poco Común" },
+        { "id": 3,  "nombre": "Elixir de Curación",      "tipo": "Poción",    "precio": 250,  "rareza": "Común" },
+        { "id": 4,  "nombre": "Colgante Arcano",         "tipo": "Accesorio", "precio": 1800, "rareza": "Raro" },
+        { "id": 5,  "nombre": "Martillo del Titán",      "tipo": "Arma",      "precio": 4200, "rareza": "Épico" },
+        { "id": 6,  "nombre": "Armadura Celestial",      "tipo": "Armadura",  "precio": 6500, "rareza": "Legendario" },
+        { "id": 7,  "nombre": "Anillo del Viento",       "tipo": "Accesorio", "precio": 1300, "rareza": "Poco Común" },
+        { "id": 8,  "nombre": "Poción de Invisibilidad", "tipo": "Poción",    "precio": 600,  "rareza": "Raro" },
+        { "id": 9,  "nombre": "Ballesta Élfica",         "tipo": "Arma",      "precio": 2800, "rareza": "Épico" },
+        { "id": 10, "nombre": "Túnica del Sabio",        "tipo": "Armadura",  "precio": 1700, "rareza": "Raro" },
+        { "id": 11, "nombre": "Gema del Destino",        "tipo": "Accesorio", "precio": 7200, "rareza": "Legendario" },
+        { "id": 12, "nombre": "Poción del Fénix",        "tipo": "Poción",    "precio": 1200, "rareza": "Épico" }
+    ]
+}
